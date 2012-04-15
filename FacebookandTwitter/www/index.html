@@ -34,7 +34,7 @@
         <!-- facebook js sdk -->
         <script src="facebookjs/facebook_js_sdk.js"></script>
         <script src="twitterjs/twitter.js"></script>
-        <script src="twitterjs/TwitterKit.js"></script>
+        <script src="twitterjs/TwitterPlugin.js"></script>
         
         <div id="header">
             <div id="back-link" onclick="openPage('root')"><div id="back">&lt; Back</div></div>
@@ -346,7 +346,7 @@
                 console.log(imgURL);
                 
                 try {
-                    tk = TwitterKit.install();
+                    tk = TwitterPlugin.install();
                     tk.tweetMsg(msg,url,imgURL);
                 } catch(e) {
                     alert(e);

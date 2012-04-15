@@ -1,9 +1,9 @@
-function TwitterKit()
+function TwitterPlugin()
 {
     
 }
 
-TwitterKit.prototype.tweetMsg = function(msg, url, imgUrl)
+TwitterPlugin.prototype.tweetMsg = function(msg, url, imgUrl)
 {
     window.plugins.twitter.sendTweet(
                                      function(s){}, 
@@ -13,25 +13,25 @@ TwitterKit.prototype.tweetMsg = function(msg, url, imgUrl)
                                      imgUrl);
 };
 
-TwitterKit.log = function(msg)
+TwitterPlugin.log = function(msg)
 {
     alert(msg);
 }
 
-TwitterKit.install = function()
+TwitterPlugin.install = function()
 {
     if(!window.plugins) {
         window.plugins = {};
     }
     
-    window.plugins.twitterKit = new TwitterKit();
-    return window.plugins.twitterKit;
+    window.plugins.twitterplugin = new TwitterPlugin();
+    return window.plugins.twitterplugin;
 };
 
-TwitterKit.onTweetSuccess = function() {
+TwitterPlugin.onTweetSuccess = function() {
     tweetSuccess();
 }
 
-TwitterKit.onTweetFailure = function() {
+TwitterPlugin.onTweetFailure = function() {
     tweetFailed();
 }

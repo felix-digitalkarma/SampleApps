@@ -2,8 +2,8 @@
 #import <Foundation/Foundation.h>
 #import <Twitter/Twitter.h>
 #import <Accounts/Accounts.h>
-#ifdef PHONEGAP_FRAMEWORK
-    #import <PhoneGap/#import <Cordova/CDVPlugin.h>>
+#ifdef CORDOVA_FRAMEWORK
+    #import  <Cordova/CDVPlugin.h>
 #else
     #import <Cordova/CDVPlugin.h>
 #endif

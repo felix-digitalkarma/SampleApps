@@ -73,14 +73,14 @@
             switch (result) {
                 case TWTweetComposeViewControllerResultDone:
                     //[super writeJavascript:[[PluginResult resultWithStatus:PGCommandStatus_OK] toSuccessCallbackString:callbackId]];
-                    [super writeJavascript:@"TwitterKit.onTweetSuccess();"];
+                    [super writeJavascript:@"TwitterPlugin.onTweetSuccess();"];
                     [super writeJavascript:[NSString stringWithFormat:@"postToTwitterSucceeded();"] ];
                     break;
                 case TWTweetComposeViewControllerResultCancelled:
                 default:
                     [super writeJavascript:[[CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR 
                                                            messageAsString:@"Cancelled"] toErrorCallbackString:callbackId]];
-                    [super writeJavascript:@"TwitterKit.onTweetFailure();"];
+                    [super writeJavascript:@"TwitterPlugin.onTweetFailure();"];
                     break;
             }
             
