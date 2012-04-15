@@ -5,7 +5,7 @@
 #ifdef CORDOVA_FRAMEWORK
     #import  <Cordova/CDVPlugin.h>
 #else
-    #import <Cordova/CDVPlugin.h>
+    #import "CDVPlugin.h"
 #endif
 
 @interface TwitterPlugin : CDVPlugin{

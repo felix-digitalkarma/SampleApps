@@ -74,7 +74,7 @@
                 case TWTweetComposeViewControllerResultDone:
                     //[super writeJavascript:[[PluginResult resultWithStatus:PGCommandStatus_OK] toSuccessCallbackString:callbackId]];
                     [super writeJavascript:@"TwitterPlugin.onTweetSuccess();"];
-                    [super writeJavascript:[NSString stringWithFormat:@"postToTwitterSucceeded();"] ];
+                    
                     break;
                 case TWTweetComposeViewControllerResultCancelled:
                 default:
