@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'FacebookandTwitter' target in the 'FacebookandTwitter' project
+//
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+#endif
