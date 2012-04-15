@@ -22,8 +22,7 @@
 //  FacebookandTwitter
 //
 //  Created by Felix Montanez on 4/14/12.
-//  Copyright Actv8, LLC 2012. All rights reserved.
-//
+
 
 #import "AppDelegate.h"
 #import "MainViewController.h"
