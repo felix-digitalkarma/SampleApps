@@ -1,29 +1,29 @@
 var Twitter = function(){};
 
 Twitter.prototype.isTwitterAvailable = function(response){
-    PhoneGap.exec(response, null, "org.apache.cordova.twitter", "isTwitterAvailable", []);
+    cordova.exec(response, null, "org.apache.cordova.twitter", "isTwitterAvailable", []);
 };
 
 Twitter.prototype.isTwitterSetup = function(response){
-    PhoneGap.exec(response, null, "org.apache.cordova.twitter", "isTwitterSetup", []);
+    cordova.exec(response, null, "org.apache.cordova.twitter", "isTwitterSetup", []);
 };
 
 Twitter.prototype.sendTweet = function(success, failure, tweetText, urlAttach, imageAttach){
     if(typeof urlAttach === "undefined") urlAttach = "";
     if(typeof imageAttach === "undefined") imageAttach = "";
     
-    PhoneGap.exec(success, failure, "org.apache.cordova.twitter", "sendTweet", [tweetText, urlAttach, imageAttach]);
+    cordova.exec(success, failure, "org.apache.cordova.twitter", "sendTweet", [tweetText, urlAttach, imageAttach]);
 };
 
 Twitter.prototype.getPublicTimeline = function(success, failure){
-    PhoneGap.exec(success, failure, "org.apache.cordova.twitter", "getPublicTimeline", []);
+    cordova.exec(success, failure, "org.apache.cordova.twitter", "getPublicTimeline", []);
 };
 
 Twitter.prototype.getMentions = function(success, failure){
-    PhoneGap.exec(success, failure, "org.apache.cordova.twitter", "getMentions", []);
+    cordova.exec(success, failure, "org.apache.cordova.twitter", "getMentions", []);
 };
 
-PhoneGap.addConstructor(function() {
+cordova.addConstructor(function() {
     if(!window.plugins) window.plugins = {};
     window.plugins.twitter = new Twitter();
 });
